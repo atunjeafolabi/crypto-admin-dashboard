@@ -73,7 +73,7 @@ h5 {
 }
 
 h6 {
-  font-size: 7.6rem;
+  font-size: 0.76rem;
 }
 
 p {
@@ -420,6 +420,67 @@ main {
           &:nth-child(3) {
             background: linear-gradient(#5d70ff, #5719c2);
             box-shadow: 0 2rem 3rem var(--color-primary-light);
+          }
+        }
+      }
+
+      .monthly-report {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-content: space-between;
+        margin-top: 2rem;
+
+        h1 {
+          font-weight: 700;
+          font-size: 1.8rem;
+        }
+      }
+
+      .fast-payment {
+        margin-top: 2rem;
+        display: flex;
+        // align-self: center; //add later
+        gap: 2rem;
+
+        .badges {
+          display: flex;
+          gap: 1rem;
+          //   align-items: center; // add later
+          flex-wrap: wrap;
+          //   max-width: 100%; // add later
+
+          .badge {
+            padding: 0.5rem var(--card-padding);
+            background: var(--color-white);
+            border-radius: var(--border-radius-2);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            transition: all 300ms ease;
+
+            span {
+              width: 7px;
+              height: 7px;
+              border-radius: 50%;
+            }
+
+            div {
+              display: flex;
+              gap: 1rem;
+            }
+
+            &:hover {
+              box-shadow: 0 0 1.5rem var(--color-primary-light);
+            }
+
+            &:first-child span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: fit-content;
+              font-size: 1.5rem;
+            }
           }
         }
       }

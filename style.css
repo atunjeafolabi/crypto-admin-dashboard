@@ -65,7 +65,7 @@ h5 {
 }
 
 h6 {
-  font-size: 7.6rem;
+  font-size: 0.76rem;
 }
 
 p {
@@ -355,4 +355,54 @@ main section.middle .cards .card:nth-child(2) {
 main section.middle .cards .card:nth-child(3) {
   background: linear-gradient(#5d70ff, #5719c2);
   box-shadow: 0 2rem 3rem var(--color-primary-light);
+}
+main section.middle .monthly-report {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+main section.middle .monthly-report h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+main section.middle .fast-payment {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+main section.middle .fast-payment .badges {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+main section.middle .fast-payment .badges .badge {
+  padding: 0.5rem var(--card-padding);
+  background: var(--color-white);
+  border-radius: var(--border-radius-2);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  transition: all 300ms ease;
+}
+main section.middle .fast-payment .badges .badge span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+main section.middle .fast-payment .badges .badge div {
+  display: flex;
+  gap: 1rem;
+}
+main section.middle .fast-payment .badges .badge:hover {
+  box-shadow: 0 0 1.5rem var(--color-primary-light);
+}
+main section.middle .fast-payment .badges .badge:first-child span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
