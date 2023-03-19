@@ -27,6 +27,7 @@
   padding: 0;
   border: 0;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 html {
@@ -181,10 +182,20 @@ nav .container .search-bar input[type=search] {
   background: transparent;
   width: 100%;
 }
+@media screen and (max-width: 1024px) {
+  nav .container .search-bar {
+    display: none;
+  }
+}
 nav .profile-area {
   display: flex;
   align-items: center;
   gap: 4rem;
+}
+@media screen and (max-width: 600px) {
+  nav .profile-area {
+    gap: 2.6rem;
+  }
 }
 nav .profile-area .theme-btn {
   display: flex;
@@ -218,8 +229,25 @@ nav .profile-area .profile .profile-photo {
   border-radius: 50%;
   overflow: hidden;
 }
+@media screen and (max-width: 600px) {
+  nav .profile-area .profile h5 {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav .profile-area .profile span {
+    display: none;
+  }
+}
 nav .profile-area button {
   display: none;
+}
+@media screen and (max-width: 1024px) {
+  nav .profile-area button {
+    display: inline;
+    background: transparent;
+    color: var(--color-dark);
+  }
 }
 
 main {
@@ -229,14 +257,52 @@ main {
   gap: 2rem;
   margin: 1rem auto 4rem;
 }
+@media screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
 main aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 88vh;
 }
+@media screen and (max-width: 1024px) {
+  main aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: var(--color-white);
+    width: 22rem;
+    height: 100vh;
+    box-shadow: 2rem 0 2rem var(--color-primary-light);
+    display: none;
+  }
+}
 main aside button {
   display: none;
+}
+main aside button:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  main aside button {
+    display: inline;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 4;
+    background: transparent;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main aside .sidebar {
+    margin-top: 4rem;
+  }
 }
 main aside .sidebar a {
   display: flex;
@@ -278,6 +344,11 @@ main aside .updates {
   text-align: center;
   padding: var(--card-padding);
 }
+@media screen and (max-width: 1024px) {
+  main aside .updates {
+    display: none;
+  }
+}
 main aside .updates span {
   font-size: 2.8rem;
 }
@@ -309,6 +380,16 @@ main section.middle .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+@media screen and (max-width: 1024px) {
+  main section.middle .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  main section.middle .cards {
+    grid-template-columns: 1fr;
+  }
 }
 main section.middle .cards .card {
   background: linear-gradient(#ff796f, #bd261b);
@@ -388,6 +469,14 @@ main section.middle .fast-payment {
   display: flex;
   gap: 2rem;
 }
+@media screen and (max-width: 600px) {
+  main section.middle .fast-payment {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3rem;
+    gap: 1.4rem;
+  }
+}
 main section.middle .fast-payment .badges {
   display: flex;
   gap: 1rem;
@@ -429,6 +518,11 @@ main section.middle canvas {
   border-radius: var(--card-border-radius);
   padding: var(--card-padding);
 }
+@media screen and (max-width: 1024px) {
+  main section.middle canvas {
+    margin: 3rem 0 1rem;
+  }
+}
 main section.right .investments {
   background: var(--color-white);
   border-radius: var(--card-border-radius);
@@ -463,6 +557,11 @@ main section.right .investments .investment:hover {
 }
 main section.right .recent-transactions {
   margin-top: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  main section.right .recent-transactions {
+    margin-top: 3rem;
+  }
 }
 main section.right .recent-transactions .header {
   display: flex;
