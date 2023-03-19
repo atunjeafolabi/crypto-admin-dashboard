@@ -25,6 +25,14 @@
   --border-radius-2: 6px;
 }
 
+/** variable for dark theme **/
+.dark-theme {
+  --color-white: #131316;
+  --color-light: #23232a;
+  --color-dark: #ddd;
+  --color-gray-dark: #adacb5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -290,13 +298,20 @@ main {
     @media screen and (max-width: 1024px) {
       position: fixed;
       top: 0;
-      left: 0;
+      left: -100%;
       z-index: 3;
       background: var(--color-white);
       width: 22rem;
       height: 100vh;
       box-shadow: 2rem 0 2rem var(--color-primary-light);
       display: none;
+      animation: showSidebar 500ms ease forwards;
+
+      @keyframes showSidebar {
+        to {
+          left: 0;
+        }
+      }
     }
 
     // will be shown only on mobile and tablet
